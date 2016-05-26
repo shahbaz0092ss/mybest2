@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="loadingMask" style="width: 100%; height: 100%; position: fixed; background: #fff;">
+  <img class="loader-img" src="images/loader.gif" alt="" />
+</div>
+
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+          <img id="nav-logo" class="logo img-respomsive" src="images/shahbaz-orange.png" alt="" />
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                      <img class="nav-logo img-respomsive" src="images/shahbaz-tricolor.png" alt="" />
+                    </a>
+                </li>
+              <!--  <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                 <li>
+                    <a href="#">Events</a>
+                </li> -->
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+
+        <video autoplay muted  poster="images/q2.jpg" id="bgvid" loop>
+          <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+        <source src="images/v1.mp4" >
+        </video>
+        <div class="color-overlay">
+          <img id="logo1" class="logo img-respomsive" src="images/shahbaz-shadow.png" alt="" />
+          <img id="logo2" class="logo img-respomsive" src="images/shahbaz-shadow-orange.png" alt="" />
+          <img id="logo3" class="logo img-respomsive" src="images/shahbaz-shadow-green.png" alt="" />
+
+        </div>
+
+        <!-- <div id="polina">
+        <h1>Polina</h1>
+        <p>filmed by Alexander Wagner 2011
+        <p><a href="//demosthenes.info/blog/777/Create-Fullscreen-HTML5-Page-Background-Video">original article</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+        <p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
+        <button>Pause</button>
+        </div> -->
+
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+     <script src="js/video.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $(document).ready( function() {
+
+        /*
+         * ... all of your jQuery ...
+         */
+         $("#menu-toggle").click(function(e) {
+             e.preventDefault();
+             $("#wrapper").toggleClass("toggled");
+         });
+
+         setTimeout(function(){$("#logo1").css("width","20%");$("#logo1").fadeIn( 1250);}, 1000);
+         setTimeout(function(){$(".logo").fadeOut(1250);}, 2000);
+         setTimeout(function(){$("#logo2").css("width","40%");$("#logo2").fadeIn( 1250);}, 3000);
+         setTimeout(function(){$("#logo2").fadeOut(1250);}, 4000);
+         setTimeout(function(){$(".logo").fadeOut(1250);$("#logo3").css("width","70%");$("#logo3").fadeIn( 1250);}, 5000);
+         setTimeout(function(){$("#logo3").fadeOut(1250);}, 6000);
+         setTimeout(function(){$(".logo").fadeOut(1250);$("#nav-logo").fadeIn( 5000);$("#logo1").css("width","100%");$("#logo1").fadeIn( 1250);}, 7000);
+
+
+
+
+
+
+         /*
+          * ... all of your jQuery ...
+          */
+
+        // At the bottom of your jQuery code, put this:
+        $('#loadingMask').fadeOut();
+    });
+
+
+    </script>
+
+</body>
+
+</html>
